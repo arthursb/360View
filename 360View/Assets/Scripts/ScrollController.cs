@@ -63,8 +63,9 @@ public class ScrollController : MonoBehaviour{
 
     public void SpawnItem(string title, Sprite preview) {
         GameObject itemObj = Instantiate(itemPrefab, this.transform);
-        ImageItem item = itemObj.GetComponent<ImageItem>();
+        itemObj.transform.SetSiblingIndex(0);
 
+        ImageItem item = itemObj.GetComponent<ImageItem>();
         item.SetTitle("EXEMPLO");
         item.SetSprite(preview);
 

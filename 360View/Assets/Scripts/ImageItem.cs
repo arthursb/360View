@@ -77,8 +77,9 @@ public class ImageItem : MonoBehaviour {
         controller.DestroyThenUpdate(this.gameObject);
     }
 
-    public void GoToViewScene() {
+    public void GoToViewScene(string sceneName) {
         GlobalData.sprite = image.sprite;
-        SceneManager.LoadScene("3D View", LoadSceneMode.Additive);
+
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 }
